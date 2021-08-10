@@ -4,7 +4,7 @@ This docker image supports with jupyter, pytorch and cuda.
 
 ## Usage
 
-#### Run docker container:
+#### Run docker container with GPUs support in localhost:
 ```
 docker run --rm -it --gpus all -p 8888:8888 tverous/pytorch-notebook
 ```
