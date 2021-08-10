@@ -2,14 +2,19 @@
 
 This docker image supports with jupyter, pytorch and cuda.
 
-## Usage
+## Run the container
 
-#### Run docker container with GPUs support in localhost:
+#### Start a container with GPUs support:
 ```
 docker run --rm -it --gpus all -p 8888:8888 tverous/pytorch-notebook
 ```
 
-#### Launch Jupyter Notebook:
+### Start a container with volumes
+```
+docker run --rm -it --gpus all -p 8888:8888 -v /local_vol:/docker_vol tverous/pytorch-notebook
+```
+
+## Launch Jupyter Notebook
 
 When you start a notebook server with token authentication enabled (default), a token is generated to use for authentication. 
 
@@ -18,5 +23,6 @@ This token is logged to the terminal, so that you can copy/paste the URL into yo
 [I 11:59:16.597 NotebookApp] The Jupyter Notebook is running at:
 http://localhost:8888/?token=c8de56fa4deed24899803e93c227592aef6538f93025fe01
 ```
+## Detach the logged context in the tty
 
-#### Then press `Ctrl + p` and `Ctrl + q` to detach the tty.
+Press `Ctrl + p` and `Ctrl + q` to detach the tty.
