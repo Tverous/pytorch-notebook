@@ -1,4 +1,4 @@
-# Jupyter Notebook 
+# Jupyter Notebook with Pytorch
 
 This docker image supports with jupyter, pytorch and cuda.
 
