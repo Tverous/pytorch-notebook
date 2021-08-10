@@ -2,11 +2,13 @@
 
 This docker image supports with jupyter, pytorch and cuda.
 
-## Basic Use
+## Usage
 
+Run docker container:
 ```
 docker run --rm -it --gpus all -p 8888:8888 tverous/pytorch-notebook
 ```
+
 
 When you start a notebook server with token authentication enabled (default), a token is generated to use for authentication. 
 This token is logged to the terminal, so that you can copy/paste the URL into your browser:
