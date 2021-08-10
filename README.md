@@ -9,7 +9,7 @@ This docker image supports with jupyter, pytorch and cuda.
 docker run --rm -it --gpus all -p 8888:8888 tverous/pytorch-notebook
 ```
 
-### Start a container with volumes
+### Start a container with volumes:
 ```
 docker run --rm -it --gpus all -p 8888:8888 -v /local_vol:/docker_vol tverous/pytorch-notebook
 ```
