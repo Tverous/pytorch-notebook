@@ -24,6 +24,8 @@ This token is logged to the terminal, so that you can copy/paste the URL into yo
 http://localhost:8888/?token=c8de56fa4deed24899803e93c227592aef6538f93025fe01
 ```
 
+#### Make sure to update the localhost of the url to your remote server IP, if you are running the container remotely.
+
 ## Detach the logged context in the tty
 
 Press `Ctrl + p` and `Ctrl + q` to detach the tty.
