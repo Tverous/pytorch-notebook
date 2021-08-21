@@ -4,12 +4,17 @@ This docker image supports with jupyter, pytorch and cuda.
 
 ## Run the container
 
-### Start a container with GPUs support:
+### Start the container without GPUs support:
+```
+docker run --rm -it -p 8888:8888 tverous/pytorch-notebook
+```
+
+### Start the container with GPUs support:
 ```
 docker run --rm -it --gpus all -p 8888:8888 tverous/pytorch-notebook
 ```
 
-### Start a container with volumes:
+### Start the container with volumes:
 ```
 docker run --rm -it --gpus all -p 8888:8888 -v /local_vol:/docker_vol tverous/pytorch-notebook
 ```
