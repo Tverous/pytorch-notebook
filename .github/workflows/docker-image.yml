@@ -2,7 +2,7 @@ name: Create and publish a Docker iamge
 
 on:
   schedule:
-      - cron:  '0 23 * * 6'
+      - cron:  '0 23 28 * *'
   push:
     branches:
       - 'main'
