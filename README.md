@@ -8,38 +8,27 @@ This docker image supports with jupyter, pytorch and cuda.
 ```
 docker run --rm -it  \
            -p 8888:8888  \
-           -e JUPYTER_TOKEN=passwd \ # your crendential used to log in into Jupyter
+           -e JUPYTER_TOKEN=passwd  \
            tverous/pytorch-notebook:latest
 ```
 
 ### Start the container with GPUs support:
 ```
 docker run --rm -it  \
-           --gpus all  \ 
+           --gpus all  \
            -p 8888:8888  \
-           -e JUPYTER_TOKEN=passwd  \ # your crendential used to log in into Jupyter
+           -e JUPYTER_TOKEN=passwd  \
            tverous/pytorch-notebook:latest
 ```
 
 ### Start the container with volumes:
 ```
 docker run --rm -it  \
-           --gpus all  \ 
+           --gpus all  \
            -p 8888:8888  \
-           -e JUPYTER_TOKEN=passwd  \ # your crendential used to log in into Jupyter
+           -e JUPYTER_TOKEN=passwd \
            -v /local_vol:/docker_vol  \
            tverous/pytorch-notebook:latest
-```
-
-### Summary:
-```
-docker run --rm \                       # remove the container when it exits
-           -it \                        # pseudo-TTY
-           -p 8888:8888 \               # port forwarding: <Host>:<Container>
-           --gpus all \                 # support all gpus (docker > 19.03)
-           -v /local_vol:/docker_vol \  # volume: mapping local folder to container
-           -e JUPYTER_TOKEN=passwd \    # Jupyter password: passwd
-           -d tverous/pytorch-notebook:latest
 ```
 
 ## Launch Jupyter Notebook
@@ -60,3 +49,14 @@ http://localhost:8888/?token=c8de56fa4deed24899803e93c227592aef6538f93025fe01
 ## Detach the logged context in the tty
 
 Press `Ctrl + p` and `Ctrl + q` to detach the tty.
+
+## References:
+```
+docker run --rm \                       # remove the container when it exits
+           -it \                        # pseudo-TTY
+           -p 8888:8888 \               # port forwarding: <Host>:<Container>
+           --gpus all \                 # support all gpus (docker > 19.03)
+           -v /local_vol:/docker_vol \  # volume: mapping local folder to container
+           -e JUPYTER_TOKEN=passwd \    # Jupyter password: passwd
+           -d tverous/pytorch-notebook:latest
+```
