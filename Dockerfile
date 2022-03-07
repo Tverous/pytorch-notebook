@@ -4,8 +4,7 @@ FROM nvidia/cuda:11.4.2-base-ubuntu20.04
 ENV SHELL=/bin/bash
 
 # Create a working directory
-RUN mkdir /app
-WORKDIR /app
+WORKDIR /app/
 
 # Build with some basic utilities
 RUN apt-get update && apt-get install -y \
@@ -19,8 +18,8 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 
 RUN pip install \
     numpy \
-    torch
+    torch \
+    jupyterlab
 
-RUN pip install jupyterlab
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
 EXPOSE 8888
