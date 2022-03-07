@@ -6,7 +6,7 @@ This docker image supports with jupyter, pytorch and cuda.
 
 ### Start the container with only CPU support:
 ```
-docker run --rm -it 
+docker run --rm -it  \
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd \ # your crendential used to log in into Jupyter
            tverous/pytorch-notebook:latest
@@ -14,7 +14,7 @@ docker run --rm -it
 
 ### Start the container with GPUs support:
 ```
-docker run --rm -it 
+docker run --rm -it  \
            --gpus all  \ 
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \ # your crendential used to log in into Jupyter
@@ -23,7 +23,7 @@ docker run --rm -it
 
 ### Start the container with volumes:
 ```
-docker run --rm -it 
+docker run --rm -it  \
            --gpus all  \ 
            -p 8888:8888  \
            -e JUPYTER_TOKEN=passwd  \ # your crendential used to log in into Jupyter
