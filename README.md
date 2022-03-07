@@ -4,19 +4,37 @@ This docker image supports with jupyter, pytorch and cuda.
 
 ## Run the container
 
-### Start the container without GPUs support:
+### Start the container with only CPU support:
 ```
-docker run --rm -it -p 8888:8888 tverous/pytorch-notebook
+docker run --rm -it -p 8888:8888 \
+           -e JUPYTER_TOKEN=tverous \
+           tverous/pytorch-notebook:latest
 ```
 
 ### Start the container with GPUs support:
 ```
-docker run --rm -it --gpus all -p 8888:8888 tverous/pytorch-notebook
+docker run --rm -it --gpus all -p 8888:8888 \
+           -e JUPYTER_TOKEN=tverous \
+           tverous/pytorch-notebook:latest
 ```
 
 ### Start the container with volumes:
 ```
-docker run --rm -it --gpus all -p 8888:8888 -v /local_vol:/docker_vol tverous/pytorch-notebook
+docker run --rm -it --gpus all -p 8888:8888 \
+           -v /local_vol:/docker_vol \
+           tverous/pytorch-notebook:latest
+```
+
+### Summary:
+```bash
+docker run --rm \                       # remove the container when it exits
+           -it \                        # pseudo-TTY
+           -p 8888:8888 \               # public port: <External>:<Internal>
+           --gpus all \                 # support all gpus (docker > 19.03)
+           --runtime=nvidia \           # support all gpus (docker < 19.03)
+           -v /local_vol:/docker_vol \  # volume: mapping local folder to container
+           -e JUPYTER_TOKEN=tverous \   # Jupyter password: tverous
+           -d tverous/pytorch-notebook:latest
 ```
 
 ## Launch Jupyter Notebook
