@@ -37,14 +37,14 @@ When you start a notebook server with token authentication enabled (default), a 
 
 This token is logged to the terminal, so that you can copy/paste the URL into your browser:
 
-> #### If you did not specify the token before starting the container, make sure to copy/paste the token logged on the terminal
+#### If you did not specify the token before starting the container, make sure to copy/paste the token logged on the terminal
 
 ```
 [I 11:59:16.597 NotebookApp] The Jupyter Notebook is running at:
 http://localhost:8888/?token=c8de56fa4deed24899803e93c227592aef6538f93025fe01
 ```
 
-> #### Make sure to update the localhost of the url to your remote server IP, if you are running the container remotely.
+#### Make sure to update the localhost of the url to your remote server IP, if you are running the container remotely.
 
 ## Detach the logged context in the tty
 
