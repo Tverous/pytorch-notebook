@@ -1,4 +1,4 @@
-FROM nvidia/cuda:11.4.2-base-ubuntu20.04
+FROM nvidia/cuda:11.4.3-base-ubuntu20.04
 
 # Set bash as default shell
 ENV SHELL=/bin/bash
