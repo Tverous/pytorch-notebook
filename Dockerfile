@@ -1,10 +1,10 @@
 FROM nvidia/cuda:11.7.1-base-ubuntu20.04
 
-# Set bash as default shell
+# Set bash as the default shell
 ENV SHELL=/bin/bash
 
 # Create a working directory
-WORKDIR /app/
+WORKDIR $HOME
 
 # Build with some basic utilities
 RUN apt-get update && apt-get install -y \
