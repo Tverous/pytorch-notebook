@@ -31,7 +31,7 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
-### Run the container as the host user with Docker Compose
+### Start the container as the host user with Docker Compose
 
 #### Start the container
 ```
