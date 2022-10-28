@@ -44,6 +44,8 @@ cd pytorch-notebook/
 MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up -d
 ```
 
+The container will keep running until you kill it!
+
 #### Remove the container
 
 Make sure you are in the same directory, `pytorch-notebook/`, as you start the container with docker-compose.
