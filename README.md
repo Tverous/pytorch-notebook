@@ -33,7 +33,8 @@ docker run --rm -it  \
 
 ### Start the container as the host user with Docker Compose
 
-The default setting will expose port 8888 and use all available GPUs.
+The default setting will use all available Nvidia GPUs and expose port 8888.
+Make sure to change the token if you are going to expose the container to the public.
 
 #### Start the container
 ```
