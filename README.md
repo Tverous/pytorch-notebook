@@ -44,6 +44,9 @@ cd pytorch-notebook/
 MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up -d
 ```
 
+If the token is not specified, run `MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up` to get the token from the terminal intead of running it in the background.
+
+
 The container will keep running until you kill it!
 
 #### Remove the container
