@@ -39,10 +39,15 @@ Make sure to change the token if you are going to expose the container to the pu
 
 #### Start the container
 ```
+git clone https://github.com/Tverous/pytorch-notebook.git
+cd pytorch-notebook/
 MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up -d
 ```
 
 #### Remove the container
+
+Make sure you are in the same directory, `pytorch-notebook/`, as you start the container with docker-compose.
+
 ```
 MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose down
 ```
