@@ -9,6 +9,7 @@ services:
     volumes:
       - /etc/passwd:/etc/passwd:ro
       - /etc/group:/etc/group:ro
+      - /etc/shadow:/etc/shadow:ro
       - ${HOME}:${HOME}
     ports:
       - 8888:8888
@@ -19,4 +20,3 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
-

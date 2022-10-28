@@ -8,6 +8,7 @@ WORKDIR $HOME
 
 # Build with some basic utilities
 RUN apt-get update && apt-get install -y \
+    sudo \
     python3-pip \
     apt-utils \
     vim \
