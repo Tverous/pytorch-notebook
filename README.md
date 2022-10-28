@@ -31,6 +31,18 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
+### Run the container as the host user with Docker Compose
+
+#### Start the container
+```
+MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up -d
+```
+
+#### Remove the container
+```
+MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose down
+```
+
 ## Launch Jupyter Notebook
 
 When you start a notebook server with token authentication enabled (default), a token is generated to use for authentication. 
