@@ -4,7 +4,7 @@ FROM nvidia/cuda:11.7.1-base-ubuntu20.04
 ENV SHELL=/bin/bash
 
 # Create a working directory
-WORKDIR $HOME
+WORKDIR /app/
 
 # Build with some basic utilities
 RUN apt-get update && apt-get install -y \
