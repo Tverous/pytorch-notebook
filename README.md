@@ -31,7 +31,7 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
-### Start the container as the host user with Docker Compose
+### Start the container as the host user with Docker Compose (Experimental)
 
 The default setting will use all available Nvidia GPUs, expose port 8888 and map the home directory to the container.
 
