@@ -31,32 +31,6 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
-### Start the container as the host user with Docker Compose (Experimental)
-
-The default setting will use all available Nvidia GPUs, expose port 8888 and map the home directory to the container.
-
-Make sure to change the token if you are going to expose the container to the public.
-
-#### Start the container
-```
-git clone https://github.com/Tverous/pytorch-notebook.git
-cd pytorch-notebook/
-MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up -d
-```
-
-If the token is not specified, run `MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose up` to get the token from the terminal intead of running it in the background.
-
-
-The container will keep running until you kill it!
-
-#### Remove the container
-
-Make sure you are in the same directory, `pytorch-notebook/`, where you start the container with docker-compose.
-
-```
-MY_UID="$(id -u)" MY_GID="$(id -g)" docker-compose down
-```
-
 ## Launch Jupyter Notebook
 
 When you start a notebook server with token authentication enabled (default), a token is generated to use for authentication. 
