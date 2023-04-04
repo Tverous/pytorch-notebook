@@ -34,7 +34,7 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
-## Others
+## Others (Experimental)
 
 ### Build the image with non-root users
 
