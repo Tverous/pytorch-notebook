@@ -31,6 +31,54 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
+### Others
+#### Build the image with customed users
+
+```
+git clone https://github.com/Tverous/pytorch-notebook.git
+cd pytorch-notebook/
+```
+```
+docker build --no-cache \
+             -f create-user.dockerfile \
+             --build-arg MY_UID="$(id -u)" \
+             --build-arg MY_GID="$(id -g)" \
+             --build-arg USER=demo \
+             --build-arg HOME=/home/demo \
+             -t tverous/pytorch-notebook:user \
+             .
+```
+```
+docker run --rm -it  \
+           -p 8888:8888  \
+           -e JUPYTER_TOKEN=passwd  \
+           tverous/pytorch-notebook:user
+```
+Where the argument `MY_UID` is the user id for the created user, `MY_GID` is the group id for the created user, `USER` is the name for the created user and `HOME` is the home directory for the created user.
+
+Please check the file `create-user.dockerfile` for details
+
+##### Build the image with jupyter lab extensions
+```
+git clone https://github.com/Tverous/pytorch-notebook.git
+cd pytorch-notebook/
+```
+```
+docker build --no-cache \
+             -f jupyter-lab-extension.dockerfile \
+             -t tverous/pytorch-notebook:extension \
+             .
+```
+```
+docker run --rm -it  \
+           -p 8888:8888  \
+           -e JUPYTER_TOKEN=passwd  \
+           tverous/pytorch-notebook:extension
+```
+
+Update the file `jupter-lab-extension.dockerfile` for other extensions you would like to install.
+
+
 ## Launch Jupyter Notebook
 
 When you start a notebook server with token authentication enabled (default), a token is generated to use for authentication. 

@@ -4,13 +4,8 @@ services:
     image: tverous/pytorch-notebook
     environment:
       - JUPYTER_TOKEN=passwd # TODO: Change the token
-    user: ${MY_UID}:${MY_GID}
-    working_dir: ${HOME}
     volumes:
-      - /etc/passwd:/etc/passwd:ro
-      - /etc/group:/etc/group:ro
-      - /etc/shadow:/etc/shadow:ro
-      - ${HOME}:${HOME}
+      - /local_vol:/docker_vol
     ports:
       - 8888:8888
     deploy:
