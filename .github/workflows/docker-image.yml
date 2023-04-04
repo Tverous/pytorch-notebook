@@ -44,4 +44,6 @@ jobs:
             tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pytorch-notebook:devel
 
         - name: Image digest
-          run: echo ${{ steps.docker_build.outputs.digest }}
+          run: |
+            echo ${{ steps.docker_build_base.outputs.digest }}
+            echo ${{ steps.docker_build_devel.outputs.digest }}
