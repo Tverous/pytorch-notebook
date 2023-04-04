@@ -31,8 +31,8 @@ docker run --rm -it  \
            tverous/pytorch-notebook:latest
 ```
 
-### Others
-#### Build the image with customed users
+## Others
+### Build the image with customed users
 
 ```
 git clone https://github.com/Tverous/pytorch-notebook.git
@@ -58,7 +58,7 @@ Where the argument `MY_UID` is the user id for the created user, `MY_GID` is the
 
 Please check the file `create-user.dockerfile` for details
 
-##### Build the image with jupyter lab extensions
+### Build the image with jupyter lab extensions
 ```
 git clone https://github.com/Tverous/pytorch-notebook.git
 cd pytorch-notebook/
