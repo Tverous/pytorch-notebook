@@ -45,6 +45,8 @@ git clone https://github.com/Tverous/pytorch-notebook.git
 cd pytorch-notebook/
 ```
 
+Build a new image with created non-root user.
+
 ``` sh
 docker build --no-cache \
              -f create-user.dockerfile \
@@ -55,6 +57,8 @@ docker build --no-cache \
              -t tverous/pytorch-notebook:user \
              .
 ```
+
+Start the container with the image you just builded.
 
 ``` sh
 docker run --rm -it  \
@@ -78,12 +82,16 @@ git clone https://github.com/Tverous/pytorch-notebook.git
 cd pytorch-notebook/
 ```
 
+Build a new image with installed Jupyter Lab extensions.
+
 ``` sh
 docker build --no-cache \
              -f jupyter-lab-extension.dockerfile \
              -t tverous/pytorch-notebook:extension \
              .
 ```
+
+Start the container with the image you just builded.
 
 ``` sh
 docker run --rm -it  \
