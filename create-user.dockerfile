@@ -43,7 +43,7 @@ USER ${USER}
 WORKDIR ${HOME}
 
 # for user space executables
-export PATH=$PATH:${HOME}/.local/bin
+RUN export PATH=$PATH:${HOME}/.local/bin
 
 # start jupyter lab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
