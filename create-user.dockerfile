@@ -10,9 +10,9 @@ ENV RED='\033[0;31m'
 ENV GREEN='\033[0;32m'
 ENV NC='\033[0m'
 # run id -u
-ENV MY_UID=${MY_GID}
+ENV MY_UID=${MY_UID}
 # run id -g
-ENV MY_GID=${MY_UID}
+ENV MY_GID=${MY_GID}
 # your username
 ENV USER=${USER}
 # your home directory
