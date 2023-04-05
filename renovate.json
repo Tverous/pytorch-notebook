@@ -5,7 +5,7 @@
   "packageRules": [
     {
       "matchDatasources": ["docker"],
-      "matchPackageNames": ["*.dockerfile"]
+      "matchPackagePatterns": ["*.dockerfile"]
     }
   ]
 }
