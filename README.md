@@ -38,14 +38,17 @@ docker run --rm -it  \
 
 ### Build the image with non-root users
 
-To start the container with a non-root user, rebuild the image with specified user information to create a new user.
+To start the container with a non-root user, you need to build a new image that includes the designated user.
 
 ``` sh
 git clone https://github.com/Tverous/pytorch-notebook.git
 cd pytorch-notebook/
 ```
 
-Build a new image with created non-root user.
+Build a new image that incorporates a non-administrator user within.
+
+**The `NOPASSWD` option is enabled for the `sudo` command in the `create-user.dockerfile` file, signifying that no password is necessary to execute the `sudo` command.**
+Modify this setting if it is not desired.
 
 ``` sh
 docker build --no-cache \
