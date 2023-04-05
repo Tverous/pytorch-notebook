@@ -4,10 +4,10 @@
   ],
   "dockerfile": {
     "fileMatch": [
-                  '(^|/|\\.)Dockerfile$', 
-                  '(^|/)Dockerfile[^/]*$', 
-                  '(^|/|\\.)dockerfile', 
-                  '(^|/)dockerfile[^/]*$'
-                 ]
+      '(^|/|\\.)Dockerfile$', 
+      '(^|/)Dockerfile[^/]*$', 
+      '(^|/|\\.)dockerfile', 
+      '(^|/)dockerfile[^/]*$'
+    ]
   }
 }
