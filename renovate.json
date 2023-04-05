@@ -3,6 +3,6 @@
     "config:base"
   ],
   "dockerfile": {
-    "fileMatch": ["*.dockerfile"]
+    "fileMatch": ['(^|/|\\.)Dockerfile$', '(^|/)Dockerfile[^/]*$', '(^|/|\\.)dockerfile', '(^|/)dockerfile[^/]*$']
   }
 }
