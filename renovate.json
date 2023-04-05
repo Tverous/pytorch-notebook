@@ -2,10 +2,7 @@
   "extends": [
     "config:base"
   ],
-  "packageRules": [
-    {
-      "matchDatasources": ["docker"],
-      "matchPackagePatterns": ["*.dockerfile"]
-    }
-  ]
+  "dockerfile": {
+    "fileMatch": ["*.dockerfile"]
+  }
 }
