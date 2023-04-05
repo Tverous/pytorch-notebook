@@ -1,5 +1,7 @@
 # Jupyter Notebook with Pytorch
 
+[![Create and publish a Docker iamge](https://github.com/Tverous/pytorch-notebook/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Tverous/pytorch-notebook/actions/workflows/docker-image.yml)
+
 This docker image supports with jupyter, pytorch and cuda.
 
 ## Run the container
