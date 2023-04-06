@@ -33,6 +33,9 @@ RUN apt-get update && apt-get install -y \
 RUN groupadd -g ${MY_GID} ${USER} \
     && useradd ${USER} -u ${MY_UID} -g ${MY_GID} -d ${HOME} -m -s /bin/bash
 
+# for user space executables
+ENV PATH="${PATH}:${HOME}/.local/bin/"
+
 # add user to the root group
 RUN usermod -aG root ${USER}
 
@@ -41,9 +44,6 @@ RUN echo "%${USER}   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers && exit
 
 USER ${USER}
 WORKDIR ${HOME}
-
-# for user space executables
-RUN export PATH=$PATH:${HOME}/.local/bin
 
 # start jupyter lab
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
