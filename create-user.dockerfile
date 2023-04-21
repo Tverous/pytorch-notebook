@@ -36,8 +36,8 @@ RUN groupadd -g ${MY_GID} ${USER} \
 # for user space executables
 ENV PATH="${PATH}:${HOME}/.local/bin/"
 
-# add user to the root group
-RUN usermod -aG root ${USER}
+# add user to the sudo group
+RUN usermod -aG sudo ${USER}
 
 # TODO:  disable sudo password
 RUN echo "%${USER}   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers && exit
