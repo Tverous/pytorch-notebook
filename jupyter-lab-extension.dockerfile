@@ -8,6 +8,7 @@ RUN pip install \
     jupyterlab-git \
     # https://github.com/jupyter-lsp/jupyterlab-lsp
     jupyterlab-lsp \
+    'python-lsp-server[all]' \
     # https://github.com/jtpio/jupyterlab-system-monitor
     jupyterlab-system-monitor
 
