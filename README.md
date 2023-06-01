@@ -80,7 +80,7 @@ Please check the file `create-user.dockerfile` for details
 
 Jupyter Lab supports extensions to enhance its functionality.
 
-Check [awesome-jupyterlab](https://github.com/mauhai/awesome-jupyterlab) for a list of awesome JupyterLab extensions and resources.
+Check [awesome-jupyter](https://github.com/markusschanta/awesome-jupyter) for a list of awesome JupyterLab extensions and resources.
 
 ``` sh
 git clone https://github.com/Tverous/pytorch-notebook.git
