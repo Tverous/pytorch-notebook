@@ -1,5 +1,5 @@
 # pull from devel image instead of base
-FROM nvidia/cuda:11.7.1-devel-ubuntu22.04
+FROM nvidia/cuda:11.8.0-devel-ubuntu22.04
 
 # Set bash as the default shell
 ENV SHELL=/bin/bash
