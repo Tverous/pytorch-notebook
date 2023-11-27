@@ -8,9 +8,7 @@ RUN pip install \
     jupyterlab-git \
     # https://github.com/jupyter-lsp/jupyterlab-lsp
     jupyterlab-lsp \
-    'python-lsp-server[all]' \
-    # https://github.com/jtpio/jupyterlab-system-monitor
-    jupyterlab-system-monitor
+    'python-lsp-server[all]'
 
 CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--allow-root", "--no-browser"]
 EXPOSE 8888
