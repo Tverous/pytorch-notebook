@@ -49,7 +49,7 @@ cd pytorch-notebook/
 
 Build a new image that incorporates a non-administrator user within.
 
-**The `NOPASSWD` option is enabled for the `sudo` command in the `create-user.dockerfile` file, signifying that no password is necessary to execute the `sudo` command.**
+*The `NOPASSWD` option is enabled for the `sudo` command in the `create-user.dockerfile` file, signifying that no password is necessary to execute the `sudo` command.*
 Modify this setting if it is not desired.
 
 ``` sh
@@ -78,7 +78,7 @@ Please check the file `create-user.dockerfile` for details
 
 ### Build the image with HTTPS supports
 
-**Modify the parameters to OpenSSL and `PEM_FILE_PATH` defined in the file `https.dockerfile` for your needs**
+*Modify the parameters to OpenSSL and `PEM_FILE_PATH` defined in the file `https.dockerfile` for your needs*
 
 Build a new image with HTTPS supports.
 
