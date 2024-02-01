@@ -76,6 +76,30 @@ Where the argument `MY_UID` is the user id for the created user, `MY_GID` is the
 
 Please check the file `create-user.dockerfile` for details
 
+### Build the image with HTTPS supports
+
+**Modify the parameters to OpenSSL and `PEM_FILE_PATH` defined in the file `https.dockerfile` for your needs**
+
+Build a new image with HTTPS supports.
+
+``` sh
+docker build --no-cache \
+             -f https.dockerfile \
+             -t tverous/pytorch-notebook:https \
+             .
+```
+
+Start the container with the image you just builded.
+
+``` sh
+docker run --rm -it  \
+           -p 8888:8888  \
+           -e JUPYTER_TOKEN=passwd  \
+           tverous/pytorch-notebook:https
+```
+
+Now you can access your host with HTTPS.
+
 ### Build the image with jupyter lab extensions
 
 Jupyter Lab supports extensions to enhance its functionality.
@@ -87,7 +111,7 @@ git clone https://github.com/Tverous/pytorch-notebook.git
 cd pytorch-notebook/
 ```
 
-Build a new image with installed Jupyter Lab extensions.
+Build a new image with Jupyter Lab extensions installed.
 
 ``` sh
 docker build --no-cache \
