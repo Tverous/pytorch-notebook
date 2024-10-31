@@ -8,7 +8,7 @@ ENV SHELL=/bin/bash
 WORKDIR /app/
 
 # Build with some basic utilities
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     python3-pip \
     apt-utils \
     vim \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # build with some basic python packages
-RUN pip install \
+RUN pip install --no-cache-dir \
     numpy \
     torch \
     torchvision \
