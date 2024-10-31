@@ -34,11 +34,6 @@ jobs:
             push: true
             tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pytorch-notebook:base, ${{ secrets.DOCKER_HUB_USERNAME }}/pytorch-notebook 
 
-        - name: Clean up Docker system before devel build
-          run: |
-            docker system prune -f
-            docker volume prune -f
-
         - name: Build and push devel image
           id: docker_build_devel
           uses: docker/build-push-action@v6
