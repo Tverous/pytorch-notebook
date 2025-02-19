@@ -27,7 +27,6 @@ ENV PATH="/root/.local/bin/:$PATH"
 # build with some basic python packages
 RUN uv pip install --no-cache-dir \
     --system \
-    --extra-index-url https://download.pytorch.org/whl/cu124 \
     numpy \
     torch \
     torchvision \
