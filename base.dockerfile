@@ -1,4 +1,4 @@
-FROM nvidia/cuda:13.3.0-base-ubuntu22.04
+FROM nvidia/cuda:13.4.3-base-ubuntu22.04
 
 # Set bash as the default shell
 ENV SHELL=/bin/bash
